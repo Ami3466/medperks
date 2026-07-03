@@ -9,28 +9,47 @@ Tangible rewards are proven in randomized trials: adherence improved from 71% to
 - https://doi.org/10.1136/bmj.f5847
 - https://doi.org/10.1016/S2215-0366(17)30045-7
 
-## Quick start
-
-- **Web app:** https://48068d-web91t7.vps.flowengine.cloud/
-- **Android:** [APK from the latest release](../../releases/latest)
-- **Apple:** run from source with Expo - `cd caregiver && npm install && npm start`, then press `i`, or scan the QR with Expo Go
-
 ## Self-host
 
+This repo is the self-hosted version: web app, API, and Postgres, all on your own server.
+
 ```bash
-cp .env.example .env
+git clone https://github.com/Ami3466/medperks && cd medperks
+cp .env.example .env    # add your credentials (below)
 docker compose up --build
 ```
 
-Add credentials in `.env`:
+- **Web app:** http://localhost:8080
+- **API:** http://localhost:3000
+
+Credentials in `.env`:
 
 ```
 GEMINI_API_KEY=...        # vision dose confirmation (Google AI Studio)
 GEMINI_MODEL=gemini-2.5-flash
-EXPO_PUBLIC_API_URL=...   # where the app reaches your API
+EXPO_PUBLIC_API_URL=...   # public URL of your API
 ```
 
-Web: http://localhost:8080 · API: http://localhost:3000
+The web app picks up `EXPO_PUBLIC_API_URL` at container start - no rebuild needed to point it at your server.
+
+## Get the apps
+
+- **Web:** your self-hosted URL above, or the hosted demo: https://48068d-web91t7.vps.flowengine.cloud/
+- **Android:** [prebuilt APK](../../releases/latest) (connects to the demo server). For your own server, build against it:
+
+  ```bash
+  cd caregiver && npm install
+  EXPO_PUBLIC_API_URL=https://api.your-domain.com npx expo run:android
+  ```
+
+- **iPhone:** build from source the same way:
+
+  ```bash
+  cd caregiver && npm install
+  EXPO_PUBLIC_API_URL=https://api.your-domain.com npx expo run:ios
+  ```
+
+  Or scan the QR from `npm start` with Expo Go.
 
 ## Privacy
 
