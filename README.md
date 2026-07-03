@@ -4,10 +4,7 @@ MedPerks gamifies taking meds for people with anosognosia - patients who refuse 
 
 The caregiver funds prizes. The patient takes the meds on camera; AI confirms it is the right person, the right meds, and a real swallow - and the patient collects perks. A per-person engine learns which prize, time, and wording work best and rotates prizes so they stay fresh.
 
-Tangible rewards are proven in randomized trials: adherence improved from 71% to 85% (FIAT, BMJ 2013) and from 80% to 94% in an independent replication (Money for Medication, Lancet Psychiatry 2017).
-
-- https://doi.org/10.1136/bmj.f5847
-- https://doi.org/10.1016/S2215-0366(17)30045-7
+Tangible rewards are proven in randomized trials: adherence improved from 71% to 85% ([FIAT, BMJ 2013](https://doi.org/10.1136/bmj.f5847)) and from 80% to 94% in an independent replication ([Money for Medication, Lancet Psychiatry 2017](https://doi.org/10.1016/S2215-0366%2817%2930045-7)).
 
 ## Use it
 
